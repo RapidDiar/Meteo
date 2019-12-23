@@ -1,7 +1,24 @@
 import pandas as pd
-import re
+import re,sys
+from PyQt5 import QtWidgets
+from UI_main import Ui_MainWindow
 
-excel_header = ['Дата','средняя','осадков, мм']
+
+class UI_window(QtWidgets.QMainWindow):
+    def __init__(self):
+        super(UI_window,self).__init__()
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+        self.ui.pushButton.clicked.c
+
+
+app = QtWidgets.QApplication([])
+application = UI_window()
+application.show()
+
+sys.exit(app.exec())
+
+'''excel_header = ['Дата','средняя','осадков, мм']
 list_month = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря']
 word_dict = pd.DataFrame()
 excel_read = pd.read_excel('1900-1995.xlsx',sheet_name='Лист1')
@@ -22,7 +39,7 @@ date_input.append([next(iter(word_dict[word_dict['Дата'] == date_input[0][in
 print(date_input)
 
 
-print(word_dict.iloc[[index for index in range(int(date_input[1][0]),int(date_input[1][1])+1)]])
+print(word_dict.iloc[[index for index in range(int(date_input[1][0]),int(date_input[1][1])+1)]])'''
 
 
 
