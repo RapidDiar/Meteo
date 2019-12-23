@@ -10,8 +10,8 @@ df.plot()
 plt.show()'''
 
 import re
-string = 'декабря'
-date = '31 декабря 1995'
-#result = re.sub(r'\D'+string+'\D','.12.',date)
-result = re.findall(r'\D[а-я]',date)
-print(result)
+date = ['31.12.1943','31.12.1946','31.12.1966','31.12.1976','31.12.1987']
+df = pd.DataFrame()
+df['Date'] = date
+print(next(iter(df[df['Date']=='31.12.1946'].index)))
+print(df.loc[[i for i in range(1,4)]])

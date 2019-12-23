@@ -16,6 +16,17 @@ for date in word_dict.index:
             break
     word_dict['Дата'][date] = insert_date
 
+print('input')
+date_input = [[input() for i in range(2)]]
+date_input.append([next(iter(word_dict[word_dict['Дата'] == date_input[0][index]].index))for index in range(2)])
+print(date_input)
+
+
+print(word_dict.iloc[[index for index in range(int(date_input[1][0]),int(date_input[1][1])+1)]])
+
+
+
+
 
 
 
